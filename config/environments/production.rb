@@ -68,13 +68,13 @@ Rails.application.configure do
     address:               'smtp.sendgrid.net',
     port:                 587,
     domain:               'mail.userauth.com',
-    user_name:            'apikey' 
+    user_name:            'apikey',
     password:             ENV["SENDGRID_KEY"],
     authentication:       'plain',
     enable_starttls_auto: true
   }
 
-  config.action_mailer.default_url_options = { host: "https://mighty-escarpment-50874.herokuapp.com" }
+  config.action_mailer.default_url_options = { host: "https://floating-river-22339.herokuapp.com/" }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
