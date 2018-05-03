@@ -19,5 +19,13 @@ RSpec.describe UserVerificationsController, type: :controller do
 
       it { expect(response).to have_http_status(:unauthorized) }
     end
+
+    it "sends verification attempt email" do
+      ActiveJob::Base.queue_adapter = :test
+
+      expect {
+        post :create,  params: { email: db_user.email, image: db_user.image }
+      }.to have_enqueued_job.on_queue('mailers')
+    end
   end
 end
