@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an API to manage and verify users.
 
-Things you may want to cover:
+The available endpoints are:
 
-* Ruby version
+* GET    /users                  Returns a list of users.
+* POST   /users                  Create user. Params => { user: { email: user_email, image: png_image }
+* PUT    /users/:id              Update user. Params => { image: png_image }
+* DELETE /users/:id              Delete user.
+* POST   /verify_user/:email     Verify user. Params => { image: png_image }
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Ruby version: 2.5.0
+* Rails version: 5.1.6
+* Test suite: RSpec
