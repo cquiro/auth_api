@@ -14,3 +14,5 @@ Info about the tools used:
 * Ruby version: 2.5.0
 * Rails version: 5.1.6
 * Test suite: RSpec
+
+Check it out at: https://floating-river-22339.herokuapp.com
